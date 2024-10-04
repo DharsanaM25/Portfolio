@@ -1,0 +1,76 @@
+/* Home.css */
+.home {
+  height: 80vh;
+  width:230%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  flex-direction: column; /* Align content vertically */
+}
+
+.home-content {
+  max-width: 200%;
+  display: flex;
+}
+
+.profile-picture img {
+  border-radius: 50%;
+  width: 300px; /* Adjust the size of the profile picture */
+  height: 330px; /* Ensure it's a square */
+  margin-bottom: 10px;
+  float: right;
+}
+
+.fade-in {
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 2.5s forwards; /* Fade in effect */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.content{
+    margin-left: 80px;
+    max-width: 600px;
+    height: 350px;
+    margin-top: 20px;
+}
+.home p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.home-button {
+  background-color: #1b9bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.home-button:hover {
+  background-color: #0a7bbf;
+}
