@@ -6,7 +6,7 @@ const About = () => {
   return (
     
     <div className="about">
-      <div className="content slide-in">
+      <div className="slide-in">
         <h1 className="scale-up">About Me</h1>
        
         <p className="scale-up">

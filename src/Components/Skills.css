@@ -1,66 +1,179 @@
-/* Skills.css */
 .skills {
+  margin-top: 100px;
   align-items: center;
   border-radius: 60px;
-    margin-left: 150px;
-    
-    height: 80vh;
-    width:150%;
-    padding: 20px;
-    background-color:white;
-    text-align: center;
+  margin-left: 150px;
+  margin-right: 0px;
+  max-width: 1200px;
+  height: auto;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards; /* Fade in effect */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
+  to {
+    opacity: 1;
+  }
+}
+
+.skills h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: slideInFromTop 1.2s forwards; /* Slide in animation */
+  animation-delay: 0.5s; /* Delay to make it after the container */
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.skills-container {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 60px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  animation: scaleUp 1.5s forwards;
+  animation-delay: 1s; /* Delay for skill cards */
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.skill-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.progress {
+  background-color: #e0e0e0;
+  border-radius: 65px;
+  height: 20px;
+  margin: 10px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #1b9bff;
+  height: 100%;
+  border-radius: 35px;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  transition: width 0.5s ease-in-out;
+  width: 0;
+  animation: fillProgress 2s forwards;
+  animation-delay: 1.5s; /* Delay for the progress bar animation */
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%; /* Adjust this percentage based on the actual progress */
+  }
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .skills {
+    width: 90%;
+  }
+
   .skills h1 {
-   
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-size: 2rem;
   }
-  
-  .skills-container {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+
   .skill-card {
-    width:50vh;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 60px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-   /* Adjust the width as needed */
-    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 45%;
   }
-  
-  .skill-card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .skills {
+    width: 100%;
+    padding: 15px;
+    margin-top: 230px;
+    margin-left: 10px;
   }
-  
+
+  .skills h1 {
+    font-size: 1.8rem;
+  }
+
+  .skill-card {
+    max-width: 100%;
+  }
+
   .progress {
-    background-color: #e0e0e0;
-    border-radius: 65px;
-    height: 20px;
-    margin: 10px 0;
-    width: 100%; /* Full width of the card */
+    height: 15px;
   }
-  
+
   .progress-bar {
-    background-color: #1b9bff;
-    height: 100%;
-    border-radius: 35px;
-    color: white;
-    text-align: center;
-    line-height: 20px; /* Center text vertically */
-    transition: width 0.5s;
+    line-height: 15px;
   }
-  
-  .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .skills {
+    margin-left: 50px;
   }
-  
+
+  .skills h1 {
+    font-size: 1.5rem;
+  }
+
+  .skill-card {
+    padding: 15px;
+  }
+
+  .progress {
+    height: 12px;
+  }
+
+  .progress-bar {
+    line-height: 12px;
+  }
+}

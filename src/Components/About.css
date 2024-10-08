@@ -1,56 +1,120 @@
-/* About.css */
 .about {
-    margin-top: 70px;
-    width:150%;
-    height: 50vh; /* Adjusted for flexibility */
-    padding: 20px;
-    background-color: rgb(240, 240, 240);
-    text-align:justify;
-    border-radius: 60px;
-    margin-left: 60px;
-  }
-  
-  
-  .about h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .about p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Slide-in effect */
-  .slide-in {
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: slideIn 0.8s forwards;
-  }
-  
-  @keyframes slideIn {
-    to {
+  margin-top: 15%;
+  width: 80%; /* Adjusted to make it responsive */
+ /* Added a max-width to avoid overflow on large screens */
+  height: auto; /* Changed to auto to allow flexibility */
+  padding: 20px;
+  background-color: rgb(240, 240, 240);
+  text-align: justify;
+  border-radius: 60px;
+  margin-left: auto; /* Center the content horizontally */
+  margin-right: auto; /* Center the content horizontally */
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding:5px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+/* Slide-in effect */
+.slide-in {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 0.8s forwards;
+}
+
+@keyframes slideIn {
+  to {
       opacity: 1;
       transform: translateX(0);
-    }
   }
-  
-  /* Scale-up effect */
-  .scale-up {
-    opacity: 0;
-    transform: scale(0.8);
-    animation: scaleUp 0.5s forwards;
-  }
-  
-  @keyframes scaleUp {
-    to {
+}
+
+/* Scale-up effect */
+.scale-up {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleUp 0.5s forwards;
+}
+
+@keyframes scaleUp {
+  to {
       opacity: 1;
       transform: scale(1);
-    }
   }
-  
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .about {
+      width: 90%; /* Reduce the width on medium screens */
+      margin-left: 70px; /* Adjust margins for smaller screens */
+      margin-right: 70px;
+      margin-top: 130px;
+  }
+
+  .about h1 {
+      font-size: 2rem; /* Adjust font sizes for readability */
+  }
+
+  .about p {
+      font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+      width: 100%; /* Ensure full-width on smaller screens */
+      margin-left: 80px;
+      margin-right: 10px;
+      margin-top: 250px;
+  }
+
+  .about h1 {
+      font-size: 1.8rem;
+  }
+
+  .about p {
+      font-size: 1rem;
+  }
+
   .about h2 {
-    font-size: 2rem;
-    margin-top: 30px;
+      font-size: 1.6rem;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .about {
+      padding: 15px; /* Reduce padding for very small screens */
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+
+  .about h1 {
+      font-size: 1.5rem;
+  }
+
+  .about p {
+      font-size: 0.9rem;
+  }
+
+  .about h2 {
+      font-size: 1.4rem;
+  }
+}

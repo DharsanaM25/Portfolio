@@ -1,56 +1,119 @@
 .footer {
-   /* Adjust margin to push the footer */
-   margin-top: 200px;
-   width:100%;
-   height:10vh;
-    background-color: #bbe0f3;
-    color: #090909;
-    padding: 20px;
-    display: flex;
-    z-index: 1000;
-    position: fixed;
-  
-    
-  }
-  .foot{
-   
-    margin-left: 350px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 30px;
-  }
-  .foot i{
-    background-color:white;
-    padding: 2px;
-    border-radius: 25px;
-    gap:15;
-    margin-right: 5px;
-    margin-top: 5px;
-  }
-  
-  .foot li{
-    list-style: none;
-  }
-  .foot li a{
-    text-decoration: none;
+  margin-top: 200px;
+  width: 100%;
+  height: auto; /* Make the height auto to adjust based on content */
+  background-color: #bbe0f3;
+  color: #090909;
+  padding: 20px;
+  display: flex;
+  /* Stack elements vertically for smaller screens */
+  align-items: center;
+  z-index: 1000;
+  position: fixed;
+  bottom: 0; /* Ensure the footer stays at the bottom */
+}
+
+.foot {
+  margin-left:300px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 400; /* Use a lighter font weight */
+  text-align: left;
+}
+
+.foot i {
+  background-color: white;
+  padding: 2px;
+  border-radius: 25px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.foot li {
+  list-style: none;
+}
+
+.foot li a {
+  text-decoration: none;
+  color: inherit; /* Ensure link inherits the color of the text */
+}
+
+.foot1 {
+  margin-top: 10px;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 400;
+  display: block;
+  margin-left: 400px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+/* Responsive Footer Styling */
+@media (max-width: 1024px) {
+  .footer {
+      flex-direction: column; /* Stack elements vertically on medium screens */
+      padding: 15px;
   }
 
-  .foot1{
-    margin-top: 10px;
-    margin-left: 350px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 30px;
-    display: block;
+  .foot, .foot1 {
+      margin-left: 0; /* Center text for medium-sized screens */
+      text-align: center;
   }
-  .icon{
-    width:20px;
-    height:20px;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  .social-icons a{
-    text-decoration: none;
+}
 
+@media (max-width: 768px) {
+  .footer {
+      padding: 10px;
   }
-  
-  
-  
+
+  .foot {
+      font-size: 1rem; /* Adjust font size for better readability */
+      margin-left: 0;
+  }
+
+  .foot1 {
+      font-size: 0.9rem;
+      margin-left: 0;
+  }
+
+  .icon {
+      width: 18px; /* Slightly smaller icons on mobile */
+      height: 18px;
+  }
+
+  .foot i {
+      padding: 1px; /* Adjust padding for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+  }
+
+  .foot, .foot1 {
+      font-size: 0.85rem; /* Smaller font size for mobile devices */
+      margin: 0;
+  }
+
+  .icon {
+      width: 16px; /* Smaller icons for small screens */
+      height: 16px;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+
+  .foot i {
+      margin-top: 2px;
+  }
+}
